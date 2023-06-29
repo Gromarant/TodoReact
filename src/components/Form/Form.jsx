@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 const Form = ({addTask}) => {
@@ -6,6 +5,7 @@ const Form = ({addTask}) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
+    setValue(e.target.value)
     addTask(value);
     setValue("");
   }

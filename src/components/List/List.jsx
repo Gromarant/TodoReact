@@ -4,22 +4,26 @@ import tasks from './dataTasks';
 import Item from './Item/Item.jsx';
 import Form from '../Form/Form';
 import './List.css'
-uuidv4();
 
 const List = () => {
   const [items, setItems] = useState(tasks);
 
-  const paint = () => items.map((task, i) => <Item description={task.description} key={i}/>)
+  const paint = () => items.map((task) => <Item todo={task.task} key={task.id} deleteItem={() =>deleteTask(task.id)}/>)
 
   const addTask = (task) => {
-    setItems([...items, {id: uuidv4, task}])
-    console.log(items);
+    setItems([...items, {id: uuidv4(), task}])
   }
+
+  const deleteTask = (id) => setItems(items.filter(task => task.id !== id));
+  const deleteTasks = () => setItems([]);
+  const reloadTasks = () => setItems(tasks);
 
   return (
     <>
-      <section>
+      <section> 
         <Form addTask={addTask} />
+        <button onClick={deleteTasks}>Delete Tasks</button>
+        <button onClick={reloadTasks}>Reload Tasks</button>
         {paint()}
       </section>
     </>

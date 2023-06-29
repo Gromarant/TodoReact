@@ -1,8 +1,11 @@
 import './Item.css'
 
-const Item = ({description}) => {
+const Item = ({todo, deleteItem}) => {
   return (
-    <li>{description}</li>
+    <article className='task'>
+      <h3>{todo}</h3>
+      <button onClick={deleteItem}>Delete</button>
+    </article>
   )
 };
 
