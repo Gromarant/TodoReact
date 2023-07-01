@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+// import PropTypes from 'prop-types';
 import './Form.css';
 
 const Form = ({addTask}) => {
@@ -11,12 +12,19 @@ const Form = ({addTask}) => {
     setValue("");
   }
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setValue("");
+    }, 20000);
+    return () => clearTimeout(timer);
+  }, [value]);
+  
 
   return (
     <form className='todo_form' onSubmit={handleAdd}>
       <label htmlFor="addInput">Add new task</label><br/>
       <input className='todo_input' type="text" name="addInput" value={value} placeholder="add a new task" onChange={(e) => setValue(e.target.value)}/>
-      <input className='add_btn' type="submit" value="ADD" /><br/>
+      {value.length > 0 && <input className='add_btn' type="submit" value="ADD" />}
     </form>
   )
 };

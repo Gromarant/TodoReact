@@ -11,7 +11,7 @@ const List = () => {
   const paint = () => items.map((task) => <Item todo={task.task} key={task.id} deleteItem={() =>deleteTask(task.id)}/>)
 
   const addTask = (task) => {
-    setItems([...items, {id: uuidv4(), task}])
+    setItems([{id: uuidv4(), task}, ...items])
   }
 
   const deleteTask = (id) => setItems(items.filter(task => task.id !== id));
