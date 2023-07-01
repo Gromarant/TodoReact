@@ -1,14 +1,20 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import './Form.css';
+
+Form.propTypes  = {
+  addTask: PropTypes.func,
+}
 
 const Form = ({addTask}) => {
   const [value, setValue] = useState("");
-  
+
   const handleAdd = (e) => {
     e.preventDefault();
-    setValue(e.target.value)
-    addTask(value);
+    if (e.target.value>5) {
+      setValue(e.target.value)
+      addTask(value);
+    }
     setValue("");
   }
 
@@ -19,7 +25,6 @@ const Form = ({addTask}) => {
     return () => clearTimeout(timer);
   }, [value]);
   
-
   return (
     <form className='todo_form' onSubmit={handleAdd}>
       <label htmlFor="addInput">Add new task</label><br/>
@@ -28,5 +33,6 @@ const Form = ({addTask}) => {
     </form>
   )
 };
+
 
 export default Form;
