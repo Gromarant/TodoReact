@@ -1,0 +1,13 @@
+.section_buttons {
+  padding: 0.8rem;
+}
+button {
+  padding: 1rem;
+}
+article {
+  display: flex;
+  padding: 0.8rem;
+}
+h3 {
+  width: 100%;
+}

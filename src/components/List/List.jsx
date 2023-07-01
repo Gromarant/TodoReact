@@ -22,8 +22,10 @@ const List = () => {
     <>
       <section> 
         <Form addTask={addTask} />
-        <button onClick={deleteTasks}>Delete Tasks</button>
-        <button onClick={reloadTasks}>Reload Tasks</button>
+        <section className='section_buttons'>
+          <button onClick={deleteTasks}>Delete Tasks</button>
+          <button onClick={reloadTasks}>Reload Tasks</button>
+        </section>
         {paint()}
       </section>
     </>

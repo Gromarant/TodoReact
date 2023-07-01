@@ -1,14 +1,16 @@
 import { useState } from 'react';
+import './Form.css';
 
 const Form = ({addTask}) => {
   const [value, setValue] = useState("");
-
+  
   const handleAdd = (e) => {
     e.preventDefault();
     setValue(e.target.value)
     addTask(value);
     setValue("");
   }
+
 
   return (
     <form className='todo_form' onSubmit={handleAdd}>

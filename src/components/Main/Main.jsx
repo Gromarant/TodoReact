@@ -1,4 +1,5 @@
 import List from '../List/List';
+import './Main.css';
 
 const Main = () => {
   

@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+form {
+  background-color: rgb(249, 241, 226);
+  border-radius: 0.4rem;
+  padding: 2rem 4rem;
+  margin: 0.8rem;
+  width: 30rem;
+}
+
+input {
+  height: 2rem;
+}
