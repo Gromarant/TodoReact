@@ -42,7 +42,7 @@ const List = () => {
       <section>
         <Form addTask={addTask} handleAdd={handleAdd} value={value} setValue={setValue}/>
         <section className='section_buttons'>
-          <button onClick={deleteTasks}>Delete Tasks</button>
+          <button className="deleteBtn" onClick={deleteTasks}>Delete Tasks</button>
           <button onClick={reloadTasks}>Reload Tasks</button>
         </section>
         { messageText.length > 0 && <p>{messageText}</p>}

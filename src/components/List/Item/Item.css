@@ -1,0 +1,14 @@
+article {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  text-align: left;
+  margin: 0.8rem;
+  background-color: aliceblue;
+}
+
+
+.deleteBtn {
+  background-color: #ed9a9a;;
+}
