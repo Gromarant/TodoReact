@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import './Item.css'
+
 
 const Item = ({todo, deleteItem}) => {
   return (
@@ -8,5 +10,10 @@ const Item = ({todo, deleteItem}) => {
     </article>
   )
 };
+
+Item.propTypes = {
+  todo: PropTypes.string.isRequired,
+  deleteItem: PropTypes.func.isRequired,
+}
 
 export default Item;
