@@ -1,8 +1,8 @@
 # TodoReact
 
-It is a TODO list implemented using React and using the useState hook. [Try the app](https://)
+It is a TODO list implemented using React and using the useState hook. [Try the app](https://todoreactgromarant.netlify.app/)
 
-[See repository](https://)
+[See repository](https://github.com/Gromarant/TodoReact/tree/master)
 
 <br>
 
